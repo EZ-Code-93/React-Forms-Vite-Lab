@@ -93,3 +93,6 @@ and added to our list of items.
 ## Resources
 
 - [React Forms](https://facebook.github.io/react/docs/forms.html)
+
+**added state functionality to search, filter, and form inputs**
+Files Modified: App.jsx  ShoppingList.jsx  Filter.jsx  ItemForm.jsx

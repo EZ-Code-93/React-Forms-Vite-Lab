@@ -10,11 +10,16 @@ function App() {
   function handleDarkModeClick() {
     setIsDarkMode((isDarkMode) => !isDarkMode);
   }
+// Added handleAddItem function to update items state when a new item is added
+  function handleAddItem(newItem) {
+    setItems([...items, newItem]);
+  }
 
   return (
     <div className={"App " + (isDarkMode ? "dark" : "light")}>
       <Header isDarkMode={isDarkMode} onDarkModeClick={handleDarkModeClick} />
-      <ShoppingList items={items} />
+      {/* Added onItemFormSubmit prop to ShoppingList component to pass handleAddItem function */}
+      <ShoppingList items={items} onItemFormSubmit={handleAddItem} />
     </div>
   );
 }
